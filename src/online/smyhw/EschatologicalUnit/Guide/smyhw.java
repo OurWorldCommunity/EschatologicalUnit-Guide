@@ -176,7 +176,7 @@ class CancleT extends BukkitRunnable
 				temp4.cancel();
 				smyhw.loger.info(smyhw.prefix+"导航点<"+temp4.id+">已被玩家到达");
 				smyhw.PointMap.remove(temp3);
-				List temp5 = smyhw.configer.getStringList("Guide."+"."+temp4.id+"cmd");
+				List temp5 = smyhw.configer.getStringList("Guide."+temp4.id+".cmd");
 				if(temp5==null) {continue;}
 				Iterator<String> temp6 = temp5.iterator();
 				while(temp6.hasNext())
