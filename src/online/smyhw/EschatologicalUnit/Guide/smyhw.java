@@ -149,7 +149,7 @@ class Continued extends BukkitRunnable
 	@Override
 	public void run() 
 	{
-		bworld.playEffect(zb, Effect.MOBSPAWNER_FLAMES, 0.5);
+		bworld.playEffect(zb, Effect.MOBSPAWNER_FLAMES, 1);
 	}
 	
 }
