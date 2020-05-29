@@ -1,0 +1,8 @@
+name: EschatologicalUnit.Guide
+main: online.smyhw.EschatologicalUnit.Guide.smyhw
+version: 1.0.0
+author: smyhw
+commands:
+  euG:
+    description: euG
+    usage: /<command>

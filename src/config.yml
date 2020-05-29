@@ -1,0 +1,26 @@
+###EschatologicalUnit.Guide配置文件###
+#该插件为OurWorld服务器EschatologicalUnit小游戏项目的一个原创插件
+#导航点插件
+
+config:
+    #本插件提示消息的前缀
+    prefix: "[EschatologicalUnit]"
+
+
+#导航点配置
+Guide:
+  Point1:
+    world: world
+    x: 100
+    y: 100
+    z: 100
+    cmd:
+    - say 欢迎来到1号检查点
+    - kill @a
+  point2:
+    world: world
+    x: 110
+    y: 100
+    z: 100
+    cmd:
+    - say 欢迎来到2号检查点
