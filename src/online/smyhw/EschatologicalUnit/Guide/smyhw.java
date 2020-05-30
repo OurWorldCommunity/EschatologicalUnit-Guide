@@ -137,7 +137,7 @@ class Continued extends BukkitRunnable
 	public Continued(String id)
 	{
 		this.id=id;
-		String worldname = smyhw.configer.getString("Guide."+"."+id+".world");
+		String worldname = smyhw.configer.getString("Guide."+id+".world");
 		bworld = Bukkit.getWorld(worldname);
 		Double x = smyhw.configer.getDouble("Guide."+"."+id+".x");
 		Double y = smyhw.configer.getDouble("Guide."+"."+id+".y");
@@ -177,6 +177,7 @@ class CancleT extends BukkitRunnable
 				smyhw.loger.info(smyhw.prefix+"导航点<"+temp4.id+">已被玩家到达");
 				smyhw.PointMap.remove(temp3);
 				List temp5 = smyhw.configer.getStringList("Guide."+temp4.id+".cmd");
+				temp4.bworld.playEffect(temp4.zb, Effect.CLICK1, 1);
 				if(temp5==null) {continue;}
 				Iterator<String> temp6 = temp5.iterator();
 				while(temp6.hasNext())
