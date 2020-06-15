@@ -36,7 +36,7 @@ public class smyhw extends JavaPlugin implements Listener
 	@Override
     public void onEnable() 
 	{
-		getLogger().info("EschatologicalUnit.SpawnMobs加载");
+		getLogger().info("EschatologicalUnit.Guide加载");
 		getLogger().info("正在加载环境...");
 		loger=getLogger();
 		configer = getConfig();
@@ -99,7 +99,6 @@ public class smyhw extends JavaPlugin implements Listener
                 case "do":
                 {
                 	if(args.length<2) {CSBZ(sender);return true;}
-                	Continued temp1 = new Continued(args[1]);
                 	if(configer.getString("Guide."+"."+args[1]+".world")==null)
                 	{
                 		sender.sendMessage(prefix+"导航点<"+args[1]+">不存在");
@@ -110,9 +109,19 @@ public class smyhw extends JavaPlugin implements Listener
                 		sender.sendMessage(prefix+"导航点<"+args[1]+">已经处于激活状态,无法重新激活");
                 		return true;
                 	}
+                	Continued temp1 = new Continued(args[1]);
                 	PointMap.put(args[1], temp1);
                 	sender.sendMessage(prefix+"导航点<"+args[1]+">已激活");
                 	return true;
+                }
+                case "reset":
+                {//重置所有已经激活的导航点
+                	for(String temp1:PointMap.keySet())
+                	{
+                		PointMap.get(temp1).cancel();
+                		PointMap.remove(temp1);
+                		sender.sendMessage(prefix+"所有激活的导航点已经删除");
+                	}
                 }
                 
                 }
