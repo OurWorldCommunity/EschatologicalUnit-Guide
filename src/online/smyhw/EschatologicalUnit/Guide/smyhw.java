@@ -120,8 +120,8 @@ public class smyhw extends JavaPlugin implements Listener
                 	{
                 		PointMap.get(temp1).cancel();
                 		PointMap.remove(temp1);
-                		sender.sendMessage(prefix+"所有激活的导航点已经删除");
                 	}
+            		sender.sendMessage(prefix+"所有激活的导航点已经删除");
                 }
                 
                 }
