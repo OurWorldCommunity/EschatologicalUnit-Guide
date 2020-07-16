@@ -174,7 +174,9 @@ class CancleT extends BukkitRunnable
 	@Override
 	public void run() 
 	{
-		Set<String> temp1 = smyhw.PointMap.keySet();
+		HashMap<String, Continued>temp0 = (HashMap<String, Continued>) smyhw.PointMap.clone();
+		Set<String> temp1 =temp0.keySet();
+		
 		Iterator<String> temp2 = temp1.iterator();
 		while(temp2.hasNext())
 		{
