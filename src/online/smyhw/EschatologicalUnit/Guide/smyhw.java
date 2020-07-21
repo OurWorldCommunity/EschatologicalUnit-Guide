@@ -114,6 +114,19 @@ public class smyhw extends JavaPlugin implements Listener
                 	sender.sendMessage(prefix+"导航点<"+args[1]+">已激活");
                 	return true;
                 }
+                case "undo":
+                {
+                	if(args.length<2) {CSBZ(sender);return true;}
+                	if(!PointMap.containsKey(args[1]))
+                	{
+                		sender.sendMessage(prefix+"导航点<"+args[1]+">不在激活表中,无法取消激活");
+                		return true;
+                	}
+                	PointMap.get(args[1]).cancel();
+                	PointMap.remove(args[1]);
+                	sender.sendMessage(prefix+"导航点<"+args[1]+">已取消激活");
+                	return true;
+                }
                 case "reset":
                 {//重置所有已经激活的导航点
                 	for(String temp1:PointMap.keySet())
