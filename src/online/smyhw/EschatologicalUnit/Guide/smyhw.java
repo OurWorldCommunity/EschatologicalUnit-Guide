@@ -32,7 +32,7 @@ public class smyhw extends JavaPlugin implements Listener
 	public static Logger loger;
 	public static FileConfiguration configer;
 	public static String prefix;
-	public static HashMap<String,Continued> PointMap ;
+	public static Hashtable<String,Continued> PointMap ;
 	@Override
     public void onEnable() 
 	{
@@ -41,7 +41,7 @@ public class smyhw extends JavaPlugin implements Listener
 		loger=getLogger();
 		configer = getConfig();
 		smyhw_=this;
-		PointMap = new HashMap<String,Continued>();
+		PointMap = new Hashtable<String,Continued>();
 		new CancleT();
 		getLogger().info("正在加载配置...");
 		saveDefaultConfig();
